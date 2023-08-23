@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.fragment.BarcodeFragment">
+
+    <TextView
+        android:id="@+id/barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/barcode_barang"
+        style="@style/barcode_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="16dp"/>
+
+    <ImageView
+        android:id="@+id/imgCamera"
+        android:layout_width="match_parent"
+        android:layout_height="304dp"
+        android:layout_below="@id/barcode"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@android:color/darker_gray"/>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_below="@id/imgCamera"
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/titlePembelian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pembelian"
+        android:layout_below="@id/line"
+        style="@style/pembelian"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlePembelian"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="16dp"
+        android:padding="6dp">
+        
+        <ImageView
+            android:id="@+id/imgItem"
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/darker_gray"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/txtItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgItem"
+            android:text="@string/item"
+            style="@style/txt_item"/>
+
+        <TextView
+            android:id="@+id/txtprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rp_0"
+            android:layout_below="@id/txtItem"
+            android:layout_toEndOf="@id/imgItem"
+            style="@style/txt_item_2"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgItem"
+            android:layout_marginStart="173dp"
+            android:layout_marginEnd="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="2dp">
+                <EditText
+                    android:id="@+id/edTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/total"
+                    android:textColor="@android:color/black"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnTambah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tlTotal"
+                android:text="@string/tambah"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorButton"/>
+
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

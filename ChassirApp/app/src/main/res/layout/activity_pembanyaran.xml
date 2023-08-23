@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.pembanyaran.PembanyaranActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbPembayaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPembanyaran"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        tools:listitem="@layout/list_pembayaran"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/metode_pembayaran"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp">
+        
+        <ImageView
+            android:id="@+id/imgPembanyaranBank"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/darker_gray"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/txtPembanyaranBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/imgPembanyaranBank"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="12dp"/>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total2"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/txtPembanyaranTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/total"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/noReks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_rek"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/txtPembanyaranNoRek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/noReks"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/qrImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qris"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/imgQris"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_toEndOf="@id/qrImg"
+            android:background="@android:color/darker_gray"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

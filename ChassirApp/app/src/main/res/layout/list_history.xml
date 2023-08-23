@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp">
+
+    <ImageView
+        android:id="@+id/imgListItem"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:background="@android:color/darker_gray"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="17dp"/>
+
+    <TextView
+        android:id="@+id/txtListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item"
+        android:layout_toEndOf="@id/imgListItem"
+        android:layout_alignParentTop="true"
+        style="@style/txt_list_item_name"/>
+
+    <TextView
+        android:id="@+id/txtListPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rp_0"
+        android:layout_below="@id/txtListItem"
+        android:layout_toEndOf="@id/imgListItem"
+        style="@style/txt_list_item_price"/>
+
+    <RelativeLayout
+        android:id="@+id/rlBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtListPrice"
+        android:layout_toEndOf="@id/imgListItem"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pembelian2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            style="@style/title_pembelian"/>
+
+        <TextView
+            android:id="@+id/txtListBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:layout_toEndOf="@id/buy"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlBuy"
+        android:layout_toEndOf="@id/imgListItem"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            style="@style/titel_total"/>
+
+        <TextView
+            android:id="@+id/txtListTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:layout_toEndOf="@id/total"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

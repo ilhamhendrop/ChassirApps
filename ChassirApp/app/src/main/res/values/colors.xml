@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="splashBack">#207E82</color>
+    <color name="colorEditText">#FFFFFFFF</color>
+    <color name="colorText">#FF000000</color>
+    <color name="colorButton">#1D5464</color>
 </resources>

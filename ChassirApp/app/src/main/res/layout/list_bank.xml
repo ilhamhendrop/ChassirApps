@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+    
+    <ImageView
+        android:id="@+id/iconImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_bank"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/txtListBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_toEndOf="@id/iconImg"
+        android:layout_alignParentTop="true"
+        style="@style/list_bank"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/iconImg"
+        android:layout_below="@id/txtListBank"
+        android:text="@string/_0"
+        style="@style/list_bank_rek"/>
+
+</RelativeLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.barang.DetailBarangActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@android:color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/imgDetailItem"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@android:color/darker_gray"
+                app:layout_collapseMode="parallax"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tbDetail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtDetailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_barang"
+                style="@style/detail_item_name"
+                />
+
+            <TextView
+                android:id="@+id/txtDetailPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rp_0"
+                style="@style/deyail_item_price"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/stok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stok"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    style="@style/detail_item_stok"/>
+
+                <TextView
+                    android:id="@+id/txtDetailStok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/stok"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/_0"
+                    style="@style/detail_item_stok"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_produk"
+                style="@style/detail_tittle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipe"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    style="@style/detail_item_type"/>
+
+                <TextView
+                    android:id="@+id/txtDetailType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type"
+                    android:layout_toEndOf="@id/tipe"
+                    style="@style/detail_item_name_"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/jenis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jenis"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    style="@style/detail_item_type"/>
+
+                <TextView
+                    android:id="@+id/txtDetailJenis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jenis2"
+                    android:layout_toEndOf="@id/jenis"
+                    android:layout_alignParentTop="true"
+                    style="@style/detail_item_name_"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pembelian"
+                style="@style/detail_tittle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputBuah"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true">
+
+                    <EditText
+                        android:id="@+id/edDetailBuah"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="@string/buah"
+                        android:inputType="number"
+                        android:textColor="@android:color/black"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buah"
+                    android:layout_toEndOf="@id/inputBuah"
+                    android:layout_alignParentTop="true"
+                    style="@style/detail_item_buah"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total2"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    style="@style/detail_item_total_"/>
+
+                <TextView
+                    android:id="@+id/txtDetailTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_0"
+                    android:layout_toEndOf="@id/total"
+                    android:layout_alignParentTop="true"
+                    style="@style/detail_item_total_price"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btnDetailKeranjang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="60dp"
+                android:backgroundTint="@color/colorButton"
+                android:text="@string/keranjang"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

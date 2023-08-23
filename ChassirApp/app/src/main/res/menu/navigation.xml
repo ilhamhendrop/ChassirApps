@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/navHome"
+        android:icon="@drawable/ic_outline_home"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/navBarcode"
+        android:icon="@drawable/ph_barcode_light"
+        android:title="@string/barcode"/>
+
+    <item
+        android:id="@+id/navHistory"
+        android:icon="@drawable/material_symbols_history"
+        android:title="@string/history"/>
+
+</menu>

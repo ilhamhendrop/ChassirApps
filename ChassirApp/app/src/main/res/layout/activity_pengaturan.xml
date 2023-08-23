@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.pengaturan.PengaturanActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbPengaturan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civSettingPhoto"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/txtSettingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textSize="12sp"
+            android:layout_toEndOf="@id/civSettingPhoto"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="11dp"
+            android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="21dp"/>
+
+    <TextView
+        android:id="@+id/txtSettingShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/txtSettingBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/txtSettingAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/txtSettingLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="16dp"/>
+
+</LinearLayout>

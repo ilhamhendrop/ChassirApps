@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.keranjang.KeranjangActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbKeranjang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvKeranjang"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_below="@id/tbKeranjang"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        tools:listitem="@layout/list_keranjang"/>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/rvKeranjang"/>
+
+    <RelativeLayout
+        android:id="@+id/rlMetode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/line"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/metode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/metode_pembayaran"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/txtPilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/metode"
+            android:text="@string/pilih"
+            android:layout_marginStart="200dp"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/colorButton"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@id/rlMetode"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/imgKeranjangInput"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_bank"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/txtKeranjangInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgKeranjangInput"
+            android:text="@string/name"
+            android:layout_alignParentTop="true"
+            style="@style/bank_input_name_bank_2"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlBank"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total2"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/txtKeranjangTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/total"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:text="@string/rp_0"
+            android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_below="@+id/rlTotal"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"/>
+
+    <Button
+        android:id="@+id/btnBayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bayar"
+        android:layout_below="@id/line2"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="201dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>

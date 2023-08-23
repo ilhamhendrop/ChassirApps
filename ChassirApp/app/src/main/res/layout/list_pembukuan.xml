@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:contentPadding="6dp"
+        app:cardUseCompatPadding="true">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:contentPadding="6dp"
+                app:cardCornerRadius="6dp"
+                app:cardBackgroundColor="@color/splashBack"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtPembukuanDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tahun"
+                        style="@style/list_pembukuan_tanggal"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rlData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_below="@id/cardDate"
+                android:layout_alignParentStart="true">
+                
+                <ImageView
+                    android:id="@+id/imgPembukuan"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/txtPembukuanName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/imgPembukuan"
+                    android:text="@string/name"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    style="@style/list_pembukuan_name"/>
+
+                <TextView
+                    android:id="@+id/txtPembukuanPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rp_0"
+                    android:layout_below="@id/txtPembukuanName"
+                    android:layout_toEndOf="@id/imgPembukuan"
+                    style="@style/list_pembukuan_price"/>
+                
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTerjual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:contentPadding="6dp"
+                app:cardCornerRadius="6dp"
+                app:cardBackgroundColor="@color/splashBack"
+                android:layout_below="@id/rlData"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentEnd="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/terjual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/terjual"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        style="@style/list_pembukuan_tanggal"/>
+
+                    <TextView
+                        android:id="@+id/txtPembukuanTerjual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/terjual"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/_0"
+                        style="@style/list_pembukuan_tanggal"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

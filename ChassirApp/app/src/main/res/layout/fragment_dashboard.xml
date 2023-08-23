@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboard.fragment.DashboardFragment">
+
+    <RelativeLayout
+        android:id="@+id/rlIconCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="290dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/splashBack"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:cardElevation="3dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/icNotif"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ion_notifcations"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+                <ImageView
+                    android:id="@+id/icShopBag"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ri_shopping_bag_line"
+                    android:layout_toEndOf="@id/icNotif"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"/>
+
+                <ImageView
+                    android:id="@+id/icSetting"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ant_design_setting_filled"
+                    android:layout_toEndOf="@id/icShopBag"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlIconCard"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="270dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/splashBack"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:cardElevation="3dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/welcome_"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/welcome"
+                    />
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/welcome"
+                    android:text="@string/name"
+                    style="@style/name_" />
+
+                <TextView
+                    android:id="@+id/txtShop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shop"
+                    android:layout_below="@id/txtName"
+                    style="@style/shop_"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlName"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardItem"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:cardElevation="3dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/icBasket"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/bi_basket"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/barang"
+                    style="@style/cardItem"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBank"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:cardElevation="3dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/icBaskets"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ph_bank"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bank"
+                    android:layout_marginTop="4dp"
+                    style="@style/cardItem"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMember"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:cardElevation="3dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/icMember"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_baseline_card_membership"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/member"
+                    android:layout_marginTop="4dp"
+                    style="@style/cardItem"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPembukuan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:cardElevation="3dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/icMembers"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_baseline_card_membership"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pembukuan"
+                    android:layout_marginTop="4dp"
+                    style="@style/cardItem"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

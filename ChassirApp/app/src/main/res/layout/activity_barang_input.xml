@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.barang.BarangInputActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tlbBarangInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imgCameraInput"
+        android:layout_width="151dp"
+        android:layout_height="151dp"
+        android:background="@color/colorButton"
+        android:src="@drawable/ph_camera_fill"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp">
+
+        <EditText
+            android:id="@+id/edInputItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_barang"
+            android:inputType="text"
+            android:textColor="@android:color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp">
+
+        <EditText
+            android:id="@+id/edInputPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/harga_barang"
+            android:inputType="number"
+            android:textColor="@android:color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp">
+
+        <EditText
+            android:id="@+id/edInputStok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/stok_barang"
+            android:inputType="number"
+            android:textColor="@android:color/black"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBulan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="23dp">
+
+        <TextView
+            android:id="@+id/bulan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jenis_barang"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spJenisBarang"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/bulan"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSimpanBarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/simpang_barang"
+        android:layout_marginLeft="92dp"
+        android:layout_marginRight="92dp"/>
+
+</LinearLayout>
